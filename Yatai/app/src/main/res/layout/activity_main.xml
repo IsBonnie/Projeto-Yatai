@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Fundo"
+    tools:context=".MainActivity">
+
+    <!-- Logo com ícone e texto -->
+    <ImageView
+        android:id="@+id/imageRamen"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="144dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/yataicom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/logoLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/imageRamen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ramen"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:id="@+id/textYatai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yatai"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:fontFamily="@font/marhey" />
+    </LinearLayout>
+
+    <!-- Texto de boas-vindas -->
+    <TextView
+        android:id="@+id/textDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo! Explore nosso cardápio e\naproveite cada sabor com prazer."
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/gluten_bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/logoLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botão -->
+    <Button
+        android:id="@+id/buttonExperimentar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quero experimentar!"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#555555"
+        android:fontFamily="@font/gluten_bold"
+        android:layout_marginTop="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textDescricao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
